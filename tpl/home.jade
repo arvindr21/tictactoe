@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Node js Socket IO Tic Tac Toe')
+    meta(name='author', content='Arvind Ravulavaru')
+    title Arvind Ravulavaru | Node js Socket IO Tic Tac Toe
+    //
+       Bootstrap core CSS 
+    
+    link(href='/bootstrap.css', rel='stylesheet')
+    link(href='/main.css', rel='stylesheet')
+    //
+       Custom styles for this template 
+   //
+       HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries 
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+
+      
+  body
+    .container
+      .container
+      .header
+          h3.text-muted Tic Tac Toe
+      .jumbotron
+        h2#vs &nbsp;
+        a#newGame.btn.btn-success New Game
+        div(style='clear:both;')
+        .left.pull-left
+          .row
+            .cell.ntl(data-row='0', data-col='0')
+            .cell.nt(data-row='0', data-col='1')
+            .cell.ntr(data-row='0', data-col='2')
+          .row
+            .cell.nl(data-row='1', data-col='0')
+            .cell(data-row='1', data-col='1')
+            .cell.nr(data-row='1', data-col='2')
+          .row
+            .cell.nbl(data-row='2', data-col='0')
+            .cell.nb(data-row='2', data-col='1')
+            .cell.nbr(data-row='2', data-col='2')
+        .right.pull-right
+            #log
+      .footer
+          p © JOJS 2014
+        //
+          /container 
+  
+
+    script(type='text/javascript', src='jquery.js')
+    script(type='text/javascript', src='/socket.io/socket.io.js')
+    script(type='text/javascript', src='main.js')

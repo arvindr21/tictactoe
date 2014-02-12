@@ -1,0 +1,88 @@
+.cell
+{
+	width:99px;
+	height: 99px;
+	border: 2px solid black;
+	display: table-cell;
+}
+.row
+{
+
+	display: block;
+}
+
+.ntl
+{
+	border-top: none;
+	border-left: none;
+}
+.nt
+{
+	border-top: none;				
+}
+.ntr
+{
+	border-top: none;
+	border-right: none;
+}
+.nl
+{
+	border-left: none;
+}
+.nr
+{
+	border-right: none;
+}
+.nbl
+{
+	border-bottom: none;
+	border-left: none;
+}
+.nb
+{
+	border-bottom: none;
+}
+.nbr
+{
+	border-bottom: none;
+	border-right: none;
+}
+.x,.o,.X,.O
+{
+	text-align: center;
+display: block;
+}
+.x,.X
+{
+font-size: 79px;
+
+}
+.o,.O
+{
+	font-size: 87px;
+}
+#vs
+{
+	padding: 0px;
+margin: 0px;
+margin-bottom: 17px;
+margin-top: -19px;
+}
+
+#log
+{
+	height: 300px;
+border: 1px solid;
+text-align: left;
+overflow: auto;
+background: #000;
+color: #efefef;
+padding: 9px;
+width: 251px;
+}
+
+#newGame
+{
+	margin-bottom: 9px;
+	display: none;
+}

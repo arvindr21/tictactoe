@@ -1,0 +1,19 @@
+{
+  "name": "tictactoe",
+  "version": "0.0.0",
+  "description": "Node js/Socket IO/Tic Tac Toe",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Arvind Ravulavaru",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "express": "~3.4.8",
+    "jade": "~1.1.5"
+  }
+}
