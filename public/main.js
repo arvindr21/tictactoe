@@ -8,7 +8,7 @@ ttt.placeMark = function (mark, row, col) {
 }
 ttt.cleanup = function(){
 	$(".cell").html("");
-	$('#log').html("Game over. new game?");
+	$('#log').html("Game over. new game?<br/>");
 };
 
 ttt.newGame = function(){
@@ -20,7 +20,9 @@ var name = prompt("Please enter your name",t);
 ttt.user = name ? name : t;
 
 
-ttt.socket = io.connect('http://localhost:9999').emit('requestGame', {user: ttt.user});
+$('#log').append('Loading... Please wait.<br/>');
+$('#log').append('Searching for free games/users.<br/>');
+ttt.socket = io.connect(location.href.indexOf("herokuapp") > 1 ? 'http://tictactoeapp.herokuapp.com/' : 'http://localhost:9999').emit('requestGame', {user: ttt.user});
 ttt.socket.heartbeatTimeout = 60000;
 
 
@@ -80,6 +82,7 @@ ttt.socket.on('gameOver', function (data) {
 });
 
 ttt.socket.on('error', function (data) {
+	if(!data.type)
   alert(data.description);
 });
 
